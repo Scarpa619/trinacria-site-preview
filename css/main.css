@@ -129,8 +129,8 @@ a { color: inherit; }
   text-wrap: balance;
 }
 
-.card h3, .case h3, .principle h3, .discipline h3,
-.service h3, .method-step h3, .cta-band h2, .notfound h1 {
+.card h3, .case h2, .case h3, .principle h3, .discipline h3,
+.service h2, .method-step h2, .cta-band h2, .notfound h1 {
   text-wrap: balance;
 }
 
@@ -342,6 +342,15 @@ html:not(.js) .site-header {
 }
 
 /* ---------- The mark ---------- */
+
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.hero-mark circle.draw { --len: 44.3; }
+.hero-mark path.draw { --len: 80; }
 
 .mark { color: var(--gold-strong); }
 .band-dark .mark, .site-footer .mark { color: var(--gild); }
@@ -581,7 +590,7 @@ html:not(.js) .site-header {
   border-top: 1px solid var(--hairline-light);
 }
 .method-step:last-child { border-bottom: 1px solid var(--hairline-light); }
-.method-step h3 {
+.method-step h2 {
   font-family: var(--serif-display);
   font-size: clamp(28px, 3vw, 36px);
   font-weight: 600;
@@ -639,7 +648,7 @@ html:not(.js) .site-header {
   border-top: 1px solid var(--hairline-light);
 }
 .service:last-of-type { border-bottom: 1px solid var(--hairline-light); }
-.service h3 {
+.service h2 {
   font-family: var(--serif-display);
   font-size: clamp(28px, 3vw, 34px);
   font-weight: 600;
@@ -688,11 +697,12 @@ html:not(.js) .site-header {
   display: flex;
   flex-direction: column;
 }
-.case h3 {
+.case h2, .case h3 {
   font-family: var(--serif-display);
   font-size: 27px;
   font-weight: 600;
   line-height: 1.15;
+  color: var(--basalt);
 }
 .case p { margin-top: 14px; font-size: 16.5px; }
 .case .kicker {
