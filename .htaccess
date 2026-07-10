@@ -1,0 +1,21 @@
+Options -Indexes
+ErrorDocument 404 /404.html
+RewriteEngine On
+
+# Canonical host: send www to apex
+RewriteCond %{HTTP_HOST} ^www\.trinacriaadvisors\.com$ [NC]
+RewriteRule ^(.*)$ http://trinacriaadvisors.com/$1 [R=301,L]
+
+# ENABLE AFTER SSL IS CONFIRMED: remove the # from the three lines below
+# and change the www rule target above to https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://trinacriaadvisors.com/$1 [R=301,L]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+</IfModule>
