@@ -472,11 +472,14 @@ html:not(.js) .site-header {
   grid-template-columns: repeat(3, 1fr);
 }
 .proof-bar li {
-  font-family: var(--serif-inscription);
+  /* Body serif, not Marcellus: the markers carry digits (C10, C7, 2007)
+     and Marcellus figures are ambiguous with I and O in caps settings. */
+  font-family: var(--serif-body);
+  font-weight: 600;
   font-size: 12.5px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--milk);
   padding: 22px 26px;
   border-left: 1px solid rgba(200, 164, 94, 0.14);
@@ -810,6 +813,9 @@ html:not(.js) .site-header {
 
 .contact-centerpiece {
   text-align: center;
+}
+.contact-centerpiece.section {
+  padding-bottom: clamp(28px, 4vw, 44px);
 }
 .contact-centerpiece .mail {
   display: inline-block;

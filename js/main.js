@@ -5,6 +5,11 @@
 (function () {
   'use strict';
 
+  /* The js class gates hidden-until-revealed styles, so it is set here,
+     not inline in the head: if this file never runs, the site renders
+     in its fully visible no-js layout instead of hiding content. */
+  document.documentElement.className = 'js';
+
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
 
