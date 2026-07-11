@@ -130,7 +130,7 @@ a { color: inherit; }
 }
 
 .card h3, .case h2, .case h3, .principle h3, .discipline h3,
-.service h2, .method-step h2, .cta-band h2, .notfound h1 {
+.service h2, .method-step h3, .cta-band h2, .notfound h1 {
   text-wrap: balance;
 }
 
@@ -692,7 +692,7 @@ html:not(.js) .site-header {
   border-top: 1px solid var(--hairline-light);
 }
 .method-step:last-child { border-bottom: 1px solid var(--hairline-light); }
-.method-step h2 {
+.method-step h3 {
   font-family: var(--serif-display);
   font-size: clamp(28px, 3vw, 36px);
   font-weight: 600;
@@ -717,6 +717,7 @@ html:not(.js) .site-header {
 .pull-wrap {
   border-left: 2px solid var(--gold);
   padding-left: clamp(24px, 4vw, 48px);
+  margin: clamp(30px, 4.5vw, 48px) 0 0;
 }
 .pull-attrib {
   margin-top: 22px;
@@ -749,7 +750,7 @@ html:not(.js) .site-header {
   padding-block: clamp(40px, 5vw, 60px);
   border-top: 1px solid var(--hairline-light);
 }
-.service:last-of-type { border-bottom: 1px solid var(--hairline-light); }
+.service:last-of-type { border-bottom: none; padding-bottom: 0; }
 .service h2 {
   font-family: var(--serif-display);
   font-size: clamp(28px, 3vw, 34px);
@@ -757,11 +758,13 @@ html:not(.js) .site-header {
   line-height: 1.12;
 }
 .service .kicker {
-  font-family: var(--serif-inscription);
+  /* ordinal tags 01 to 07; body serif so the digits stay unambiguous */
+  font-family: var(--serif-body);
+  font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.2em;
-  color: var(--stone-dim);
-  margin-bottom: 14px;
+  color: var(--gold-text);
+  margin-bottom: 12px;
 }
 .service .typical {
   margin-top: 18px;
