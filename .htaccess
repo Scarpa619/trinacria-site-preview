@@ -1,5 +1,6 @@
 Options -Indexes
 ErrorDocument 404 /404.html
+Redirect 301 /services.html /method.html
 RewriteEngine On
 
 # Canonical host: send www to apex
